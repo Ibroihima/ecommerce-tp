@@ -1,0 +1,19 @@
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<fmt:setLocale value="fr_FR"/>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><c:out value="${pageTitle}"/> - ShopEasy</title>
+  <link rel="stylesheet" href="${ctx}/css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="${ctx}/products">🛍️ ShopEasy</a>
+  <nav>
+    <a href="${ctx}/products">Produits</a>
+    <a href="${ctx}/cart">Panier <span class="badge"><c:out value="${(empty cart) ? 0 : cart.itemCount}"/></span></a>
+  </nav>
+</header>
+<main class="container">
