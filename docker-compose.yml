@@ -36,6 +36,8 @@ services:
       SONAR_JDBC_PASSWORD: sonar
       # Évite l'échec au démarrage si vm.max_map_count est trop bas (TP uniquement)
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+      SONAR_VALIDATEWEBHOOKS: "false" 
+  
     ports:
       - "9000:9000"
     volumes:
